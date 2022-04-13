@@ -1,0 +1,269 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-family: Tahoma;
+    font-size: 16px;
+    width: 1000px;
+    margin: 0px auto;
+}
+nav{
+    
+    background: #41a0bd;
+    font-size: 12pt; /*tô màu cho menu cha*/
+    border-radius: 2px; /* bo góc */
+    font-size: 14pt;
+}
+nav ul{
+    display: flex;
+}
+nav> ul li{
+    list-style: none; /* bỏ dấu chấm mặc định của li */
+    /* kẻ đường bên trái và bên phải của li */
+    border-right: 1px solid #ccc;
+    border-left:1px solid #333;
+}
+nav> ul li a{
+    display: block;
+    padding: 0 25px;
+    line-height: 50px;
+    color: #f1f2f3;
+    text-decoration: none;
+}
+nav ul li:first-child {
+    border-left: none; /* bỏ đường kè trái của phần tử đầu tiên */
+}
+nav> ul li:first-child a{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+/* Khi hover đến li, tô màu cho thẻ a */
+nav ul li:hover>a{
+    
+    background: #b7c912;
+    color: white;
+    transition: ease-in 0.35s;
+    -moz-transition:  ease-in 0.60s;
+    -webkit-transition: ease-in 0.60s;
+}
+/*menu con*/
+/*Ẩn các menu con cấp 1,2,3*/
+nav li ul{
+    display: none;
+    min-width: 350px;
+    position: absolute;
+}
+nav li>ul li{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: #b7c912;
+    text-align: left;
+}
+nav li>ul li:first-child a{
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+nav li>ul li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+nav li>ul li:last-child a{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+/*khi hover thì hiện menu con*/
+nav  li:hover > ul{
+    display:  block;
+}
+/*Hiển thị menu con cấp 2,3,4 bên cạnh phải*/
+nav > ul li > ul li >ul{
+    margin-left: 352px;
+    margin-top: -50px;
+}
+.banner {
+    background: rgb(81, 166, 206);
+    height: auto;
+    width: 1000px;
+    float: top;
+}
+.banner img{
+    height: 350px;
+    width: 1000px;
+}
+#menu_top ul{
+    margin: 0px;
+    padding: 0px;
+}
+.main {
+    font-family: Tahoma;
+    font-size: 28pt;
+    text-align: center;
+}
+#main #left{
+    width: 800px;
+    background: white;
+    float: left;
+    height: 1500px;
+}
+.left img{
+    height: 1000px;
+    width: 800px;
+}
+
+#main #right{
+    width: 200px;
+    background: white;
+    float: right;
+    height: 200px;
+}
+.login{
+    position: sticky;
+    
+    width: 200px;
+    height: 180px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(182, 235, 235);
+    
+}
+.login h2{
+    color: #868787;
+    font-family: sans-serif;
+}
+.login input{
+    width: 150px;
+    height: 40 px;
+    margin-bottom: 10px;
+    border-radius:  5px;
+    border: 1px solid grey;
+    padding-left: 20px;
+}
+.login button{
+    width: 180px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #45a049;
+    color: white;
+
+}
+.login button :hover{
+    font-size: 15px;
+}
+#main #nameanh{
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 23pt;
+    text-transform: uppercase;
+}
+#main #anh{
+    
+    width: 200px; 
+    float: right;
+    height: 760px;
+    background: white;
+    overflow: hidden;
+}
+.box img{
+    /* position: fixed; */
+    width: 200px;
+    transition: 7s;
+}
+.box:hover img{
+    transform: translateY(calc(+200px - 760px)) ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    float: bottom;
+    /* position: unset; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    background: #111;
+    width: 1000px;
+    height: auto;
+    color: #FFF;
+    /* line-height: 60px; */
+    text-align: center;
+    font-family: "Open sans";
+    clear: left;
+    padding-top: 40px;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+
+}
+.socials a{
+    text-decoration: none;
+    color: #fff
+
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition:  color .4s ease;
+}
+.socials a:hover i{
+    color: aqua;
+}
+.footer-bottom{
+    background: rgb(7, 7, 7);
+    width: 1000px;
+    padding: 20px 0;
+    text-align: center;
+    color: #FFF;
+}
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}

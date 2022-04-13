@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Yearbook</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#" title="Trang chủ" class="active">Trang chủ</a></li>
+                <li><a href="#" title="Giới thiệu">Giới thiệu</a></li>
+                <li><a href="#" title="Đại đội">Tiểu đoàn<img src="images/b.png" alt=""/></a>  
+                    
+                    <ul>
+                        <li>
+                            <a href="#" title="Đại đội 1" >Đại đội 1</a>
+                            
+                            <ul>
+                                <li><a href="#" >KR 22</a></li>
+                                <li><a href="#" >KRS 23</a></li>
+                                <li><a href="#" >KT 27</a></li>
+                                <li><a href="#" >CSB 12</a></li>
+                                <li><a href="#" >BP 11</a></li>
+                                <li><a href="#" >KH 36A</a></li>
+                                <li><a href="#" >KH 36B</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" title="Đại đội 2" >Đại đội 2</a>
+                            
+                            <ul>
+                                <li><a href="#" >KTP 24A</a></li>
+                                <li><a href="#" >KTP 24B</a></li>
+                                <li><a href="#" >KNP 12</a></li>
+                                <li><a href="#" >KPT 27</a></li>
+                                <li><a href="#" >KD 22</a></li>
+                                <li><a href="#" >KM 31</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#" title="Đào tạo">Đào tạo</a></li>
+                <li><a href="#" title="Thông tin biển đảo">Thông tin biển đảo</a></li>
+                <li><a href="#" title="Liên hệ">Liên hệ</a></li>
+                
+            </ul>
+        </nav>
+        <div class="banner">
+            <img id="img" onclick="changeImage()" src="images/banner.png" alt="">
+
+        </div>
+        <div id="main">
+            <script>
+                var index = 1;
+                changeImage = function(){
+                    var imgs = ["images/banner.png", "images/banner1.png", "images/banner2.png"];
+                    document.getElementById('img').src = imgs[index];
+                    index++;
+                    if(index==3){
+                        index = 0;
+                    }
+                }
+                setInterval(changeImage, 1000);
+            </script>
+            <div id="left">
+                <img src="images/mainleft.png" />
+            </div>
+            <div id="right">
+                <div class="login">
+                    <h2>Thành viên</h2>
+                    <p>Tên Lớp</p>
+                    <input type="text" placeholder="Enter class">
+                    <br>
+                    <p>Mật khẩu</p>
+                    <input type="text" placeholder="Password">
+                    <br>
+                    
+                    <button>Login</button> 
+                </div>
+                
+            </div>
+            <div id="nameanh">
+                <p>Ảnh nổi bật</p>
+            </div>
+            
+            <div id="anh">
+                
+                <div class ="box">
+                    <img src="images/demo.jpg" />
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        
+        
+        
+        
+        
+
+       
+
+        <div id="footer"></div>
+        <footer>
+            <div class="footer-content"></div>
+                <h3>Tiểu đoàn 1</h3>
+                <h3>Học viện Hải quân</h3>
+                <p>Chắp cánh ước mơ.</p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-zalo"></i></a></li>
+                    
+                </ul>
+                
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy; 2021 hades1398. Design by <span>Hades1398</span></p>
+            </div>
+        </footer>
+    </body>
+</html>
